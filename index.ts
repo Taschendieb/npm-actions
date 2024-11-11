@@ -1,1 +1,1 @@
-console.log("Hello via Bun!");
+const test = true;
