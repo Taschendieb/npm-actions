@@ -26,6 +26,6 @@ jobs:
 
       - name: Remove Experimental Packages
         run: 
-          npm dist-tag rm @ronin/compiler $BRANCH_NAME-experimental
-          npm unpublish @ronin/compiler@$BRANCH_NAME-experimental
+          npm dist-tag rm @taschendieb/npm-actions $BRANCH_NAME-experimental
+          npm unpublish @taschendieb/npm-actions@$BRANCH_NAME-experimental
         
