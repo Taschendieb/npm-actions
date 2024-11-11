@@ -4,9 +4,17 @@
 	"type": "module",
 	"version": "0.0.1",
 	"devDependencies": {
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"@biomejs/biome": "1.9.2"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"lint": "bun run --bun lint:tsc && bun run --bun lint:biome",
+		"lint:biome": "biome check",
+		"lint:tsc": "tsc --pretty",
+		"format": "biome check --write && biome format --write",
+		"test": "bun test"
 	}
 }
