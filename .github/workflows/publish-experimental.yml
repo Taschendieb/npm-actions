@@ -44,7 +44,7 @@ jobs:
             Released an experimental package:
 
             ```bash
-            bun add @ronin/compiler@${{ env.VERSION_TAG }}
+            bun add @taschendieb/npm-actions@${{ env.VERSION_TAG }}
             ```
 
             This package will be removed after the pull request has been merged.
