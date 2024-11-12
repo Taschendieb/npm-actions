@@ -43,7 +43,7 @@ jobs:
           fi
           
           # Filter versions that match the pattern
-          MATCHING_VERSIONS=$(echo "$VERSIONS" | tr -d '[]" ' | tr ',' '\n' | grep -F -- "-${BRANCH_NAME_SANITIZED}-experimental")
+          MATCHING_VERSIONS=$(echo "$VERSIONS" | tr -d '[]" ' | tr ',' '\n' | grep -F -- "-${BRANCH_NAME_SANITIZED}-experimental" || true)
           
           # Check if any versions match
           if [ -z "$MATCHING_VERSIONS" ]; then
@@ -59,7 +59,7 @@ jobs:
       - name: Unpublish Versions
         if: ${{ steps.get_versions.outputs.versions != '' }}
         run: |
-          PACKAGE_NAME="@ronin/compiler"
+          PACKAGE_NAME="@taschendieb/npm-actions"
           # Read versions into an array
           IFS=$'\n' read -d '' -r -a versions_array <<< "${{ steps.get_versions.outputs.versions }}"
           for VERSION in "${versions_array[@]}"; do
