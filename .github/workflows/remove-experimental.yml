@@ -1,17 +1,16 @@
-name: Publish Experimental Packages
+name: Remove Experimental Packages
 
 on:
   pull_request:
     branches:
       - main
-
-permissions:
-  pull-requests: write
+    types: [closed]
 
 jobs:
-  publish-experimental:
-    uses: colodenn/github-actions/.github/workflows/publish-experimental.yml@main
+  remove-experimental:
+    uses: colodenn/github-actions/.github/workflows/remove-experimental.yml@main
     with:
-      package_dir: './'  # Adjust this path if your package is not at the root
+      branch_name: ${{ github.event.pull_request.head.ref }}
+      package_dir: './'  # Adjust if needed
     secrets:
       NPM_TOKEN_READ_AND_WRITE: ${{ secrets.NPM_TOKEN_READ_AND_WRITE }}
