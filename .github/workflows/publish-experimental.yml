@@ -1,11 +1,12 @@
-# File: .github/workflows/publish-experimental.yml
-
 name: Publish Experimental Packages
 
 on:
   pull_request:
     branches:
       - main
+
+permissions:
+  pull-requests: write
 
 jobs:
   publish-experimental:
