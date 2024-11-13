@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Publish Experimental Package
-        uses: colodenn/github-actions/.github/actions/bump-version/action.yml@main
+        uses: colodenn/github-actions/.github/actions/bump-version@main
         with:
           package_dir: './'  # Adjust this path if your package is not at the root
         env:
