@@ -16,5 +16,3 @@ jobs:
         uses: colodenn/github-actions/.github/actions/bump-version@main
         with:
           package_dir: './'  # Adjust this path if your package is not at the root
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
