@@ -22,6 +22,5 @@ jobs:
       package_dir: './'  # Adjust if your package is in a subdirectory
     secrets:
       NPM_TOKEN_READ_AND_WRITE: ${{ secrets.NPM_TOKEN_READ_AND_WRITE }}
-      # TODO CHANGE THIS BACK TO RONIN_ORG_APP_ID
       ORG_GH_APP_ID: ${{ secrets.APP_ID }}
       ORG_GH_APP_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
