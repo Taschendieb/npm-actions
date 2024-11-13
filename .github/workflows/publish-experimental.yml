@@ -14,5 +14,6 @@ jobs:
     uses: colodenn/github-actions/.github/workflows/publish-experimental.yml@main
     with:
       package_dir: './'  # Adjust this path if your package is not at the root
+    # TODO change to inherit when using in same org
     secrets:
-      NPM_TOKEN_READ_AND_WRITE: ${{ secrets.NPM_TOKEN_READ_AND_WRITE }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN_READ_AND_WRITE }}
