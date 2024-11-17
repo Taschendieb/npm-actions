@@ -20,6 +20,7 @@
 		"build": "tsup ./index.ts --dts --format esm"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+  		"registry": "https://npm.pkg.github.com"
 	}
 }
