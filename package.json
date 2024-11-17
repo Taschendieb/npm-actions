@@ -2,7 +2,7 @@
 	"name": "@taschendieb/npm-actions",
 	"module": "index.ts",
 	"type": "module",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"devDependencies": {
 		"@types/bun": "latest",
 		"@biomejs/biome": "1.9.2",
@@ -21,6 +21,6 @@
 	},
 	"publishConfig": {
 		"access": "public",
-  		"registry": "https://npm.pkg.github.com"
+		"registry": "https://npm.pkg.github.com"
 	}
 }
