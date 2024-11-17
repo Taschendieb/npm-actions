@@ -11,6 +11,7 @@
 	"peerDependencies": {
 		"typescript": "^5.0.0"
 	},
+	"repository": "https://github.com/colodenn/npm-actions",
 	"scripts": {
 		"lint": "bun run --bun lint:tsc && bun run --bun lint:biome",
 		"lint:biome": "biome check",
